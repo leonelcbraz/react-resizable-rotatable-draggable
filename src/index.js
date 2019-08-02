@@ -81,7 +81,8 @@ export default class ResizableRect extends Component {
   render () {
     const {
       top, left, width, height, rotateAngle, parentRotateAngle, zoomable, rotatable,
-      onRotate, onResizeStart, onResizeEnd, onRotateStart, onRotateEnd, onDragStart, onDragEnd
+      onRotate, onResizeStart, onResizeEnd, onRotateStart, onRotateEnd, onDragStart, onDragEnd,
+      style
     } = this.props
 
     const styles = tLToCenter({ top, left, width, height, rotateAngle })
@@ -104,6 +105,8 @@ export default class ResizableRect extends Component {
         onDragStart={onDragStart}
         onDrag={this.handleDrag}
         onDragEnd={onDragEnd}
+
+        style={style}
       />
     )
   }
